@@ -25,7 +25,7 @@ Flight::route('PUT /recipes/@id', function ($id) {
 
 Flight::route('DELETE /recipes/@id', function ($id) {
     Flight::recipeService()->remove_recipe($id);
-    Flight::json(["message" => "deleted"]);
+    Flight::json(["message" => "recipe deleted"]);
 });
 
 ?>
