@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/../../Config.class.php");
+require_once(__DIR__ . "/../Config.class.php");
 
 
 class BaseDao

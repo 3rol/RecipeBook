@@ -6,9 +6,8 @@ require_once("./rest/dao/BaseDao.class.php");
 require_once("./rest/dao/UserDao.class.php");
 require_once("./rest/dao/RecipeDao.class.php");
 
-$user_dao = new UserDao();
-
-$user = $user_dao->get_user_by_email("erol@gmail.com");
-print_r($user)
+$recipe_dao = new RecipeDao();
+$recipe = $recipe_dao->getRecipesById(1);
+print_r($recipe)
 
     ?>
