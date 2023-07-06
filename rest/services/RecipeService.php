@@ -13,30 +13,30 @@ class RecipeService extends BaseService
 
     public function get_all_recipes()
     {
-        return parent::getAll();
+        return $this->dao->get_all_recipes();
     }
 
 
 
     public function add_recipe($entity)
     {
-        return parent::add($entity);
+        return $this->dao->add_recipe($entity);
 
     }
 
     public function remove_recipe($id)
     {
-        return parent::delete($id);
+        return $this->dao->remove_recipe($id);
     }
 
     public function edit_recipe($id, $entity)
     {
-        return parent::update($id, $entity);
+        return $this->dao->edit_recipe($id, $entity);
     }
 
     public function get_recipe_by_id($id)
     {
-        return parent::getById($id);
+        return $this->dao->get_recipe_by_id($id);
     }
 
 
