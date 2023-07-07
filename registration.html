@@ -25,6 +25,7 @@
 <body>
 
    <!-- ======= Header ======= -->
+   <body class="flex-container">
    <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
@@ -42,58 +43,42 @@
 
     </div>
   </header><!-- End Header -->
+</body>
 
 
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Recipe Details</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Recipe Details</li>
-          </ol>
+  <body>
+    <main>
+      <div class="container marketing" style="margin-top: 100px;">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <form id="login-form">
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" name="email" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Repeat password</label>
+                <input type="password" name="password" class="form-control" />
+              </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+          <p>Have a profile? <a href="login.html">Login</a></p>
         </div>
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Recipe Details Section ======= -->
-    <section id="recipe-details" class="recipe-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div>
-            <div class="recipe-info">
-              <h3>Recipe information</h3>
-              <ul>
-                <li><strong>Title</strong>: Name of the Recipe</li>
-                <li><strong>User</strong>: User1</li>
-              </ul>
-            </div>
-            <div class="recipe-description">
-              <h2>Recipe</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod mattis tellus, nec 
-                lacinia nibh eleifend ac. In sed leo fringilla, scelerisque mauris vitae, sagittis est. Integer 
-                tincidunt, enim sit amet congue pharetra, erat felis pellentesque dolor, sed pharetra nibh velit 
-                vitae ipsum. Maecenas cursus tincidunt odio, sed posuere enim tempus ut. Sed auctor, lectus sed 
-                tristique condimentum, ex velit luctus risus, vel gravida enim mauris vitae tortor. Aenean in turpis 
-                eget nulla aliquet tristique. Nunc tincidunt nisi non est auctor, et varius tellus iaculis. Nulla ac 
-                viverra lectus. Nulla non tortor auctor, tincidunt quam non, luctus eros.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End recipe Details Section -->
-
-  </main><!-- End #main -->
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
+    <script src="assets/js/user-service.js"></script>
+    <script type="text/javascript">
+      UserService.init();
+    </script>
+  </body>
 
   
   <!-- ======= Footer ======= -->
