@@ -12,7 +12,7 @@ class Config
     }
     public static function DB_PASSWORD()
     {
-        return Config::get_env("DB_PASSWORD", "role123");
+        return Config::get_env("DB_PASSWORD", "");
     }
     public static function DB_SCHEME()
     {
@@ -20,7 +20,7 @@ class Config
     }
     public static function DB_PORT()
     {
-        return Config::get_env("DB_PORT", "3306");
+        return Config::get_env("DB_PORT", "3307");
     }
 
 

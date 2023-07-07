@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Recipe Book</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto " href="#popularRecipes">Most Popular Recipes</a></li>
+          <li><a class="nav-link" href="recipes.html">Recipes</a></li>
+          <li><a class="nav-link" href="login.html">Login</a></li>
+          <li><a class="nav-link" href="admin.html">Admin Panel</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>RecipeBook</span></h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide2.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Find the Best Recipes!</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide3.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Make Cooking Fun!</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>Welcome to our recipe book website! We are passionate about cooking and sharing delicious recipes with food enthusiasts like you.</p>
+          <p>Our mission is to provide a platform where you can explore a wide range of recipes, from traditional favorites to innovative and creative dishes.</p>
+          <p>Whether you're a beginner cook or an experienced chef, our website offers a collection of carefully curated recipes, cooking tips, and culinary inspiration to enhance your cooking skills.</p>
+          <p>Join our community of food lovers and embark on a culinary adventure with us. Let's explore the world of flavors and create memorable meals together!</p>
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+
+
+    <!-- ======= Recipes Section ======= -->
+    <section id="popularRecipes" class="popularRecipes">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Recipes</h2>
+          <p>Find the best recipes in just few clicks.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="recipe-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-soup">Soups</li>
+              <li data-filter=".filter-pasta">Pasta</li>
+              <li data-filter=".filter-dessert">Desserts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row recipe-container">
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-soup">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe1.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Soup 1</h4>
+                <p>Soup</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe1.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-pasta">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe7.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Pasta 1</h4>
+                <p>Pasta</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe7.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-soup">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe4.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Soup 2</h4>
+                <p>Soup</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe4.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-dessert">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe9.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Dessert 1</h4>
+                <p>Dessert</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe9.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-pasta">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe5.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Pasta 2</h4>
+                <p>Pasta</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe5.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-soup">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe2.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Soup 3</h4>
+                <p>Soup</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe2.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-dessert">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe6.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Dessert 1</h4>
+                <p>Dessert</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe6.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-dessert">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe8.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Dessert 3</h4>
+                <p>Dessert</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe8.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 recipe-item filter-pasta">
+            <div class="recipe-wrap">
+              <img src="assets/img/recipe/recipe3.jpg" class="img-fluid" alt="">
+              <div class="recipe-info">
+                <h4>Pasta 3</h4>
+                <p>Pasta</p>
+                <div class="recipe-links">
+                  <a href="assets/img/recipe/recipe3.jpg" data-gallery="recipeGallery" class="recipe-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="recipe-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End recipe Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h5>Recipe Book</h5>
+      <p>In case you have any questions or problems feel free to contact us.</p>
+      <h5>Email: recipeBook@gmail.com<br></h5>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Recipe Book</span></strong>. All Rights Reserved
+      </div>   
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
