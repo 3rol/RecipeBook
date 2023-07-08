@@ -12,7 +12,7 @@ class Config
     }
     public static function DB_PASSWORD()
     {
-        return Config::get_env("DB_PASSWORD", "");
+        return Config::get_env("DB_PASSWORD", "role123");
     }
     public static function DB_SCHEME()
     {
@@ -20,7 +20,13 @@ class Config
     }
     public static function DB_PORT()
     {
-        return Config::get_env("DB_PORT", "3307");
+        return Config::get_env("DB_PORT", "3306");
+    }
+
+    public static function JWT_SECRET()
+    {
+
+        return Config::get_env("JWT_SECRET", "recipe-book");
     }
 
 
