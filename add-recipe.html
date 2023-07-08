@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Your custom JavaScript file -->
+  <script src="assets/js/recipe-service.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url("assets/img/background_f.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="82">
+      <!-- ======= Header ======= -->
+   <body class="flex-container">
+    <header id="header" class="d-flex align-items-center">
+     <div class="container d-flex align-items-center">
+ 
+       <h1 class="logo me-auto"><a href="index.html">Recipe Book</a></h1>
+ 
+       <nav id="navbar" class="navbar">
+         <ul>
+           <li><a class="nav-link" href="index.html">Home</a></li>
+           <li><a class="nav-link" href="recipes.html">Recipes</a></li>
+           <li><a class="nav-link" href="login.html">Login</a></li>
+           <li><a class="nav-link" href="admin_panel.html">Admin Panel</a></li>
+         </ul>
+         <i class="bi bi-list mobile-nav-toggle"></i>
+       </nav><!-- .navbar -->
+     </div>
+   </header><!-- End Header -->
+
+
+ </body>
+      <main>
+        <div class="container">
+          <div class="row mainmargin">
+                <!--Write recipe-->
+                <form>
+                    <div class="recipeTitle">
+                        <label for="title">Title</label>
+                        <textarea class="form-control" id="recipeTitle" rows="3"></textarea>
+                      </div>
+                    <div class="recipeType">
+                      <label for="type">Recipe Type</label>
+                      <select class="form-control" id="recipeType">
+                        <option>Choose</option>
+                        <option>Meat</option>
+                        <option>Vegan</option>
+                      </select>
+                    </div>
+                    <div class="recipeDescription">
+                      <label for="description">Description</label>
+                      <textarea class="form-control" id="description" rows="15"></textarea>
+                    </div>
+                  </form>
+        </div>    
+      </main>
+
+       <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+        <h5>Recipe Book</h5>
+        <p>In case you have any questions or problems feel free to contact us.</p>
+        <p>Email: recipeBook@gmail.com</p>
+        <div class="copyright">
+            &copy; Copyright <strong><span>Recipe Book</span></strong>. All Rights Reserved
+        </div>   
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+</body>
+</html>

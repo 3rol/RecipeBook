@@ -32,7 +32,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #bd5007;
+  background: #fff;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -41,12 +41,12 @@ h6 {
 
 .back-to-top i {
   font-size: 24px;
-  color: #fff;
+  color: #fca138;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #f06038;
+  background: #bd5007;
   color: #fff;
 }
 
@@ -931,19 +931,85 @@ section {
 
 .square-button {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-color: #333;
+  width: 110px;
+  height: 40px;
+  background-color: #449d5b;
   color: #fff;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 16px;
   text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .square-button:hover {
-  background-color: #555;
+  background-color: #0c3a18;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #bd5007;
+}
+
+.image-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.image-text p {
+  font-size: 16px;
+}
+
+.post-item{
+  margin-bottom: 40px;
+  border-bottom: 1px solid #449d5b;
+}
+
+.page-item{
+  background-color: #0c3a18;
+}
+
+.page-link{
+  color: #0c3a18;
+}
+
+.page-link.active{
+  background-color: #449d5b;
+}
+
+.search-sidebar {
+  margin-top: 20px;
+}
+
+.dropdown{
+  margin-top: 10px;
+}
+
+.custom-search-button{
+  color: #0c3a18; 
+}
+
+.recipeTitle{
+  margin-top: 25px;
+}
+
+.recipeType{
+  margin-top: 20px;
+}
+
+.recipeDescription{
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 
