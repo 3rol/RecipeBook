@@ -22,11 +22,10 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="flex-container">
 
-   <!-- ======= Header ======= -->
-   <body class="flex-container">
-   <header id="header" class="d-flex align-items-center">
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html">Recipe Book</a></h1>
@@ -43,40 +42,50 @@
 
     </div>
   </header><!-- End Header -->
-</body>
 
+  <div class="image-container">
+    <img src="assets/img/login-img.jpg" class="img-fluid" alt="">
+    <div class="image-text">
+      <h1>Welcome!</h1>
+      <p>Please login to continue.</p>
+    </div>
+  </div>
 
-  <body>
-    <main>
-      <div class="container marketing" style="margin-top: 100px;">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <form id="login-form">
-            <div class="mb-3">
-              <label class="form-label">Email address</label>
-              <input type="email" name="email" class="form-control" />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" />
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
-          <p>Don't have a profile? <a href="registration.html">Register</a></p>
-        </div>
+  <main>
+    <div class="container marketing" style="margin-top: 100px; margin-bottom:100px;">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <form id="login-form">
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" />
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <p><br>Don't have a profile? <a href="registration.html">Register</a></p>
       </div>
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
-    <script src="assets/js/user-service.js"></script>
-    <script type="text/javascript">
-      UserService.init();
-    </script>
-  </body>
+    </div>
+  </main>
 
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
+
+  <!-- Include the user-service.js file -->
+  <script src="assets/js/user-service.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Initialize the UserService
+      UserService.init();
+    });
+  </script>
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -85,7 +94,7 @@
       <p>Email: recipeBook@gmail.com</p>
       <div class="copyright">
         &copy; Copyright <strong><span>Recipe Book</span></strong>. All Rights Reserved
-      </div>   
+      </div>
     </div>
   </footer><!-- End Footer -->
 
