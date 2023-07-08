@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
+      event.preventDefault();
       RecipeService.addRecipe();
     });
   });
@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         description: description
       };
   
-  
-      // Example AJAX code:
+
 
       $.ajax({
         url: "rest/recipes",
