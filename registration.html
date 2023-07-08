@@ -24,9 +24,8 @@
 
 <body>
 
-   <!-- ======= Header ======= -->
-   <body class="flex-container">
-   <header id="header" class="d-flex align-items-center">
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html">Recipe Book</a></h1>
@@ -43,57 +42,61 @@
 
     </div>
   </header><!-- End Header -->
-</body>
 
-<div class="image-container">
-  <img src="assets/img/registrationImg.jpg" class="img-fluid" alt="">
-  <div class="image-text">
-    <h1>Hello!</h1>
-    <p>Please sign up to continue.</p>
+  <div class="image-container">
+    <img src="assets/img/registrationImg.jpg" class="img-fluid" alt="">
+    <div class="image-text">
+      <h1>Hello!</h1>
+      <p>Please sign up to continue.</p>
+    </div>
   </div>
-</div>
 
-
-  <body>
-    <main>
-      <div class="container marketing" style="margin-top: 100px; margin-bottom:100px;">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <form id="login-form">
-            <div class="mb-3">
-              <label class="form-label">Email address</label>
-              <input type="email" name="email" class="form-control" />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" />
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Repeat password</label>
-                <input type="password" name="password" class="form-control" />
-              </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-          </form>
-          <p><br>Have a profile? <a href="login.html">Login</a></p>
-        </div>
+  <main>
+    <div class="container marketing" style="margin-top: 100px; margin-bottom:100px;">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <form id="register-form">
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" id="password" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Confirm password</label>
+            <input type="password" name="confirmPassword" class="form-control" />
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <p><br>Have a profile? <a href="login.html">Login</a></p>
       </div>
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
-    <script src="assets/js/user-service.js"></script>
-    <script type="text/javascript">
-      UserService.init();
-    </script>
-  </body>
+    </div>
+  </main>
 
-  
+  <!-- Vendor JS Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/user-service.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+    UserService.init();
+  </script>
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <h5>Recipe Book</h5>
-      <p>In case you have any questions or problems feel free to contact us.</p>
+      <p>In case you have any questions or problems, feel free to contact us.</p>
       <p>Email: recipeBook@gmail.com</p>
       <div class="copyright">
         &copy; Copyright <strong><span>Recipe Book</span></strong>. All Rights Reserved
@@ -102,16 +105,6 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
 
 </body>
 
