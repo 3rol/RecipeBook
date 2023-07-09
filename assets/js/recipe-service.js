@@ -5,6 +5,7 @@ $(document).ready(function() {
   });
 });
 
+
 var RecipeService = {
   addRecipe: function() {
     var title = $("#recipeTitle").val();
