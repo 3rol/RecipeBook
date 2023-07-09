@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/BaseService.php';
 require_once __DIR__ . '/../dao/RecipeDao.class.php';
+require_once __DIR__ . '/RecipeTypeService.php';
 class RecipeService extends BaseService
 {
     protected $dao;
@@ -20,6 +21,9 @@ class RecipeService extends BaseService
 
     public function add_recipe($entity)
     {
+        $data = Flight::recipeTypeService()->get_type_by_name($entity['type']);
+        unset($entity['type']);
+        $entity['type_id'] = $data[0]['id'];
         return $this->dao->add_recipe($entity);
 
     }

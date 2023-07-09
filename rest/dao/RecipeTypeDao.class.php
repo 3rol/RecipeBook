@@ -33,6 +33,10 @@ class RecipeTypeDao extends BaseDao
         return parent::get_by_id($id);
     }
 
+    public function get_type_by_name($type)
+    {
 
+        return parent::query_without_params("SELECT * FROM recipe_types WHERE type LIKE '%" . $type . "%'");
+    }
 }
 ?>

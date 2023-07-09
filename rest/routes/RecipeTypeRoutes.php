@@ -11,6 +11,10 @@ Flight::route('GET /recipetype/@id', function ($id) {
     Flight::json(Flight::recipeTypeService()->get_recipe_type_by_id($id));
 });
 
+Flight::route('GET /recipetype/type/@type', function ($type) {
+    Flight::json(Flight::recipeTypeService()->get_type_by_name($type));
+});
+
 
 Flight::route('POST /recipetype', function () {
     Flight::json(Flight::recipeTypeService()->add_recipe_type(Flight::request()->data->getData()));

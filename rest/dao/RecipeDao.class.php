@@ -14,7 +14,7 @@ class RecipeDao extends BaseDao
 
     public function add_recipe($entity)
     {
-        return parent::add($entity);
+        return parent::add_element($entity);
     }
 
     public function remove_recipe($id)

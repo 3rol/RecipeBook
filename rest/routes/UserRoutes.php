@@ -9,7 +9,7 @@ Flight::route('POST /register', function () {
     if (isset($storedUser['email'])) {
         Flight::json(["message" => "User with that email already exists. Try different email."], 404);
     } else {
-        Flight::json(Flight::userDao()->add_element(Flight::request()->data->getData()));
+        Flight::json(Flight::userDao()->add(Flight::request()->data->getData()));
     }
 });
 

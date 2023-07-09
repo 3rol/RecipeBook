@@ -11,7 +11,7 @@ $(document).ready(function () {
   // Function to load recipes from the server
   function loadRecipes() {
     $.ajax({
-      url: '/api/recipes',
+      url: '/rest/recipes',
       type: 'GET',
       success: function (recipes) {
         // Recipes loaded successfully
@@ -39,7 +39,7 @@ $(document).ready(function () {
   // Function to send AJAX request for deleting a recipe
   function deleteRecipe(recipeId) {
     $.ajax({
-      url: '/api/recipes/' + recipeId,
+      url: '/rest/recipes/' + recipeId,
       type: 'DELETE',
       success: function (response) {
         // Recipe deleted successfully

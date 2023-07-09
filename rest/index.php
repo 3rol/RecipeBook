@@ -12,6 +12,7 @@ require_once __DIR__ . '/services/RecipeTypeService.php';
 require_once __DIR__ . '/dao/RecipeTypeDao.class.php';
 require_once __DIR__ . '/dao/UserDao.class.php';
 
+
 Flight::register('recipeService', 'RecipeService');
 Flight::register('recipeDao', 'RecipeDao');
 Flight::register('recipeTypeService', 'RecipeTypeService');
@@ -20,11 +21,12 @@ Flight::register('recipeTipsService', 'RecipeTipsService');
 Flight::register('recipeTipsDao', 'RecipeTipsDao');
 Flight::register('userDao', 'UserDao');
 
+
 //middleware method for login
 
 Flight::route('/*', function () {
     $path = Flight::request()->url;
-    if ($path == '/login' || $path == '/register' || $path == '/country' || $path == '/docs.json') {
+    if ($path == '/login' || $path == '/register') {
         return TRUE;
     }
     $headers = getallheaders();
@@ -48,5 +50,6 @@ require_once __DIR__ . '/routes/RecipeRoutes.php';
 require_once __DIR__ . '/routes/RecipeTypeRoutes.php';
 require_once __DIR__ . '/routes/RecipeTipsRoutes.php';
 require_once __DIR__ . '/routes/UserRoutes.php';
+
 Flight::start();
 ?>

@@ -39,7 +39,11 @@ class RecipeTypeService extends BaseService
         return $this->dao->get_recipe_type_by_id($id);
     }
 
+    public function get_type_by_name($entity)
+    {
 
+        return $this->dao->get_type_by_name($entity);
+    }
 
 
 }
