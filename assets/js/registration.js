@@ -4,7 +4,7 @@ var Registration = {
     if (token) {
       window.location.replace("index.html");
     }
-    $("#register-form").validate({
+   $("#register-form").validate({
       rules: {
         email: {
           required: true,
@@ -49,17 +49,12 @@ var Registration = {
       success: function (result) {
         console.log(result);
         toastr.success("Registration successful! Please login to continue.");
-        window.location.replace("registration.html");
+        window.location.replace("login.html");
       },
       error: function (XMLHttpRequest, textStatus, errorThrown) {
         toastr.error(XMLHttpRequest.responseJSON.message);
       },
     });
-  },
-
-  logout: function () {
-    localStorage.clear();
-    window.location.replace("registration.html");
   },
 };
 
