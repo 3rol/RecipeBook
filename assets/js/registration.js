@@ -4,8 +4,11 @@ var Registration = {
     if (token) {
       window.location.replace("index.html");
     }
-   $("#register-form").validate({
+    $("#register-form").validate({
       rules: {
+        name: {
+          required: true,
+        },
         email: {
           required: true,
           email: true
@@ -20,6 +23,9 @@ var Registration = {
         }
       },
       messages: {
+        name: {
+          required: "Please enter your name",
+        },
         email: {
           required: "Please enter your email address",
           email: "Please enter a valid email address"
@@ -57,4 +63,3 @@ var Registration = {
     });
   },
 };
-
