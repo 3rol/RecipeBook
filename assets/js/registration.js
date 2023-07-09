@@ -49,7 +49,7 @@ var Registration = {
       success: function (result) {
         console.log(result);
         toastr.success("Registration successful! Please login to continue.");
-        window.location.replace("login.html");
+        window.location.replace("registration.html");
       },
       error: function (XMLHttpRequest, textStatus, errorThrown) {
         toastr.error(XMLHttpRequest.responseJSON.message);
@@ -59,10 +59,7 @@ var Registration = {
 
   logout: function () {
     localStorage.clear();
-    window.location.replace("login.html");
+    window.location.replace("registration.html");
   },
 };
 
-$(document).ready(function () {
-  Registration.init();
-});
