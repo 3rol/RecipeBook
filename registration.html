@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
   <!-- Google Fonts -->
@@ -21,6 +21,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <title>Registration</title>
 </head>
 
 <body>
@@ -56,22 +58,24 @@
     <div class="container marketing" style="margin-top: 100px; margin-bottom:100px;">
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <form id="register-form">
-          <div class="mb-3">
-            <label class="form-label">Email address</label>
-            <input type="email" name="email" class="form-control" />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input type="password" name="password" id="password" class="form-control" />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Confirm password</label>
-            <input type="password" name="confirmPassword" class="form-control" />
-          </div>
-          <button type="submit" class="btn btn-primary">Register</button>
-        </form>
-        <p><br>Have a profile? <a href="login.html">Login</a></p>
+        <div class="col-md-6 offset-md-3">
+          <form id="register-form">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" name="password" class="form-control" required minlength="8">
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required equalTo="#password">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+          <p><br>Have a profile? <a href="login.html">Login</a></p>
+        </div>
       </div>
     </div>
   </main>
@@ -87,28 +91,8 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/user-service.js"></script>
+  <script src="assets/js/registration.js"></script>
   <script src="assets/js/main.js"></script>
-  <script type="text/javascript">
-    UserService.init();
-  </script>
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h5>Recipe Book</h5>
-      <p>In case you have any questions or problems, feel free to contact us.</p>
-      <p>Email: recipeBook@gmail.com</p>
-      <div class="copyright">
-        &copy; Copyright <strong><span>Recipe Book</span></strong>. All Rights Reserved
-      </div>   
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-  <script src="./jquery-3.7.0.min.js"></script>
 </body>
 
 </html>
