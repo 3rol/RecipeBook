@@ -28,6 +28,25 @@ var UserService = {
       },
     });
   },
+  register: function (user) {
+    $.ajax({
+      type: "POST",
+      url: ' rest/register',
+      data: JSON.stringify(user),
+      contentType: "application/json",
+      dataType: "json",
+
+      success: function (data) {
+        localStorage.setItem("token", data.token);
+        toastr.success('You have been succesfully registered.');
+        localStorage.clear();
+
+      },
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
+        toastr.error(XMLHttpRequest.responseJSON.message);
+      }
+    });
+  },
 
   logout: function () {
     localStorage.clear();

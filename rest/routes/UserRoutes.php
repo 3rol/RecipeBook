@@ -2,6 +2,16 @@
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
+Flight::route('POST /register', function () {
+    $registerUser = Flight::request()->data->getData();
+    $storedUser = Flight::userDao()->get_user_by_email_($registerUser['email']);
+
+    if (isset($storedUser['email'])) {
+        Flight::json(["message" => "User with that email already exists. Try different email."], 404);
+    } else {
+        Flight::json(Flight::userDao()->add_element(Flight::request()->data->getData()));
+    }
+});
 
 
 Flight::route('POST /login', function () {

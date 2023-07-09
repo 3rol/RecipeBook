@@ -88,6 +88,10 @@ class BaseDao
         return $entity;
     }
 
+    public function add_element($entity)
+    {
+        return $this->add($entity);
+    }
     protected function query($query, $params)
     {
         $stmt = $this->conn->prepare($query);
