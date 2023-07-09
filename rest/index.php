@@ -26,7 +26,7 @@ Flight::register('userDao', 'UserDao');
 
 Flight::route('/*', function () {
     $path = Flight::request()->url;
-    if ($path == '/login' || $path == '/register') {
+    if ($path == '/login') {
         return TRUE;
     }
     $headers = getallheaders();
