@@ -1,11 +1,3 @@
-$(document).ready(function() {
-  $("#recipeForm").submit(function(event) {
-    event.preventDefault();
-    RecipeService.addRecipe();
-  });
-});
-
-
 var RecipeService = {
   addRecipe: function() {
     var title = $("#recipeTitle").val();
