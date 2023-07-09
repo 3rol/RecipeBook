@@ -9,7 +9,9 @@
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -92,6 +94,16 @@
   <script type="text/javascript">
     UserService.init();
   </script>
+  <script src="assets/js/registration.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Initialize the UserService
+      Registration.init();
+    });
+  </script>
+  <script type="text/javascript">
+    UserService.register(entity);
+  </script>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -101,11 +113,12 @@
       <p>Email: recipeBook@gmail.com</p>
       <div class="copyright">
         &copy; Copyright <strong><span>Recipe Book</span></strong>. All Rights Reserved
-      </div>   
+      </div>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
 </body>
 
