@@ -26,7 +26,7 @@ Flight::register('userDao', 'UserDao');
 
 Flight::route('/*', function () {
     $path = Flight::request()->url;
-    if ($path == '/login') {
+    if ($path == '/login' || $path == '/docs.json') {
         return TRUE;
     }
     $headers = getallheaders();
@@ -44,6 +44,14 @@ Flight::route('/*', function () {
         }
     }
 });
+
+/* REST API documentation endpoint */
+Flight::route('GET /docs.json', function(){
+    $openapi = \OpenApi\scan('routes');
+    header('Content-Type: application/json');
+    echo $openapi->toJson();
+  });
+  
 
 
 require_once __DIR__ . '/routes/RecipeRoutes.php';

@@ -1,8 +1,4 @@
-$(document).ready(function () {
-  // Load recipes from the server
-  loadRecipes();
-
-  // Attach event listener to delete buttons
+// Attach event listener to delete buttons
   $('#recipe-list').on('click', '.delete-button', function () {
     const recipeId = $(this).data('id');
     deleteRecipe(recipeId);
