@@ -65,17 +65,15 @@
                     </div>
                   </div>
                   <!--filter-->
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Recipe Type
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">All</a>
-                      <a class="dropdown-item" href="#">Vegan</a>
-                      <a class="dropdown-item" href="#">Meat</a>
+
+                    <div class="recipeType">
+                      <label for="type">Recipe Type</label>
+                      <select class="form-control" id="recipeType">
+                        <option>Choose</option>
+                        <option>Meat</option>
+                        <option>Vegan</option>
+                      </select>
                     </div>
-                  </div>
-                
                   <!-- Add button for adding new recipes -->
                   <div class="col-md-4">
                     <a href="./add-recipe.html" class="square-button">Add Recipe</a>
