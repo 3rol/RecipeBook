@@ -58,19 +58,19 @@
         <form id="recipeForm">
           <div class="recipeTitle">
             <label for="title">Title</label>
-            <textarea class="form-control" id="recipeTitle" rows="1"></textarea>
+            <textarea class="form-control" id="recipeTitle" rows="1" required></textarea>
           </div>
           <div class="recipeType">
             <label for="type">Recipe Type</label>
-            <select class="form-control" id="recipeType">
-              <option>Choose</option>
-              <option>Meat</option>
-              <option>Vegan</option>
+            <select class="form-control" id="recipeType" required>
+              <option value="" selected disabled>Choose</option>
+              <option value="Meat">Meat</option>
+              <option value="Vegan">Vegan</option>
             </select>
           </div>
           <div class="recipeDescription">
             <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="15"></textarea>
+            <textarea class="form-control" id="description" rows="15" required></textarea>
           </div>
           <!-- Add button for adding new recipes -->
           <div class="col-md-4">
@@ -80,6 +80,36 @@
       </div>
     </div>
   </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/recipe-service.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // Form submission event handler
+      $("#recipeForm").submit(function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+          RecipeService.addRecipe();
+        }
+      });
+
+      // Form validation function
+      function validateForm() {
+        var title = $("#recipeTitle").val();
+        var type = $("#recipeType").val();
+        var description = $("#description").val();
+
+        if (title.trim() === "" || type.trim() === "" || description.trim() === "") {
+          alert("Please fill in all required fields.");
+          return false;
+        }
+
+        return true;
+      }
+    });
+  </script>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -96,19 +126,11 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Custom JS File -->
-  <script src="recipe-service.js"></script>
 </body>
 
 </html>
