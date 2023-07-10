@@ -4,15 +4,15 @@ class Config
 
     public static function DB_HOST()
     {
-        return Config::get_env("DB_HOST", "localhost");
+        return Config::get_env("DB_HOST", "http://recipe-book-do-user-14358885-0.b.db.ondigitalocean.com/");
     }
     public static function DB_USERNAME()
     {
-        return Config::get_env("DB_USERNAME", "root");
+        return Config::get_env("DB_USERNAME", "doadmin");
     }
     public static function DB_PASSWORD()
     {
-        return Config::get_env("DB_PASSWORD", "role123");
+        return Config::get_env("DB_PASSWORD", "AVNS_cxrg9CMM6n73y65B4xw");
     }
     public static function DB_SCHEME()
     {
@@ -20,7 +20,7 @@ class Config
     }
     public static function DB_PORT()
     {
-        return Config::get_env("DB_PORT", "3306");
+        return Config::get_env("DB_PORT", "25060");
     }
 
     public static function JWT_SECRET()
