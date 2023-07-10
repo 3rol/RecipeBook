@@ -75,7 +75,7 @@ $(document).ready(function () {
       }
     });
   }
-};
+});
 
 
 function deleteRecipe(recipeId) {
