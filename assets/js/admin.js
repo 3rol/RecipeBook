@@ -11,7 +11,7 @@ var RecipeService = {
         console.log(data);
         var html = '';
         for (let i = 0; i < data.length; i++) {
-          // Fetch user data for the current recipe's user_id
+
           $.ajax({
             url: 'rest/users/' + data[i].user_id,
             type: 'GET',
@@ -20,7 +20,7 @@ var RecipeService = {
               xhr.setRequestHeader('Authorization', localStorage.getItem('user_token'));
             },
             success: function (user) {
-              // Fetch recipe type data for the current recipe's type_id
+
               $.ajax({
                 url: 'rest/recipetype/' + data[i].type_id,
                 type: 'GET',
@@ -29,7 +29,7 @@ var RecipeService = {
                   xhr.setRequestHeader('Authorization', localStorage.getItem('user_token'));
                 },
                 success: function (recipeType) {
-                  html += `<div class="post-item"> 
+                  html += `<div class="post-item" data-recipe-id="` + data[i].id + `"> 
                     <div class="post-main-info"> 
                       <p class="post-title">Recipe name: ` + data[i].name + `</p>
                       <div class="post-meta">
@@ -43,7 +43,7 @@ var RecipeService = {
                   </div>`;
                   $("#all-posts").html(html);
 
-                  // Attach event listener to delete button
+
                   $(".delete-button").on("click", function () {
                     var recipeId = $(this).data("recipe-id");
                     deleteRecipe(recipeId);
@@ -77,8 +77,8 @@ function deleteRecipe(recipeId) {
     },
     success: function (response) {
       console.log("Recipe deleted successfully.");
-      // Reload the recipe list after deleting the recipe
-      RecipeService.getRecipes();
+      // Remove recipe
+      $("[data-recipe-id='" + recipeId + "']").remove();
     },
     error: function (xhr, status, error) {
       console.log(error);
