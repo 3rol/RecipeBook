@@ -1,15 +1,5 @@
-$(document).ready(function () {
-  // Load recipes from the server
-  loadRecipes();
-
-  // Attach event listener to delete buttons
-  $('#recipe-list').on('click', '.delete-button', function () {
-    const recipeId = $(this).data('id');
-    deleteRecipe(recipeId);
-  });
-
-  // Function to load recipes from the server
-  function loadRecipes() {
+var RecipeService = {
+  getRecipes: function () {
     $.ajax({
       url: 'rest/recipes',
       type: 'GET',
