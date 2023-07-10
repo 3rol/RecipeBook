@@ -2,7 +2,11 @@
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
+require_once __DIR__ . '/../services/UserService.php';
 
+Flight::route('GET /users/@id', function ($id) {
+    Flight::json(Flight::userService()->get_user_by_id($id));
+});
 
 Flight::route('POST /login', function () {
     $login = Flight::request()->data->getData();

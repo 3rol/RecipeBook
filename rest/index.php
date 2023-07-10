@@ -20,12 +20,14 @@ Flight::register('recipeTypeDao', 'RecipeTypeDao');
 Flight::register('recipeTipsService', 'RecipeTipsService');
 Flight::register('recipeTipsDao', 'RecipeTipsDao');
 Flight::register('userDao', 'UserDao');
+Flight::register('userService', 'UserService');
 
 
 //middleware method for login
 
 Flight::route('/*', function () {
     $path = Flight::request()->url;
+    if ($path == '/login' || $path == '/docs.json') {
     if ($path == '/login' || $path == '/docs.json') {
         return TRUE;
     }
