@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,7 +9,9 @@
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -29,6 +32,7 @@
     }
   </style>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="82">
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
@@ -72,7 +76,7 @@
             <a href="./add-recipe.html" class="square-button">Add Recipe</a>
           </div>
 
-          <div class="all-posts">
+          <div id="all-posts">
             <!-- Recipes will be dynamically added here -->
           </div>
 
@@ -111,9 +115,14 @@
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="recipes.js"></script>
+  <script src="assets/js/recipes.js"></script>
+  <script>
+    RecipeService.getRecipes();
+  </script>
 </body>
+
 </html>
