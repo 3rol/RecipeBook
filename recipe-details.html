@@ -9,7 +9,9 @@
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -27,8 +29,8 @@
 
 <body>
 
-   <!-- ======= Header ======= -->
-   <header id="header" class="d-flex align-items-center">
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html">Recipe Book</a></h1>
@@ -68,28 +70,10 @@
       <div class="container">
 
         <div class="row gy-4">
+          <h1 id="recipe-title"></h1>
+          <p id="recipe-description"></p>
+          <p id="recipe-type"></p>
 
-          <div>
-            <div class="recipe-info">
-              <h3>Recipe information</h3>
-              <ul>
-                <li><strong>Title</strong>: Name of the Recipe</li>
-                <li><strong>User</strong>: User1</li>
-              </ul>
-            </div>
-            <div class="recipe-description">
-              <h2>Recipe</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod mattis tellus, nec 
-                lacinia nibh eleifend ac. In sed leo fringilla, scelerisque mauris vitae, sagittis est. Integer 
-                tincidunt, enim sit amet congue pharetra, erat felis pellentesque dolor, sed pharetra nibh velit 
-                vitae ipsum. Maecenas cursus tincidunt odio, sed posuere enim tempus ut. Sed auctor, lectus sed 
-                tristique condimentum, ex velit luctus risus, vel gravida enim mauris vitae tortor. Aenean in turpis 
-                eget nulla aliquet tristique. Nunc tincidunt nisi non est auctor, et varius tellus iaculis. Nulla ac 
-                viverra lectus. Nulla non tortor auctor, tincidunt quam non, luctus eros.
-              </p>
-            </div>
-          </div>
 
         </div>
 
@@ -98,7 +82,7 @@
 
   </main><!-- End #main -->
 
-  
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -107,11 +91,12 @@
       <p>Email: recipeBook@gmail.com</p>
       <div class="copyright">
         &copy; Copyright <strong><span>Recipe Book</span></strong>. All Rights Reserved
-      </div>   
+      </div>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -122,8 +107,13 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/recipe-details.js"></script>
   <script src="./jquery-3.7.0.min.js"></script>
+
+  <script>
+
+    RecipeDetailsService.getRecipeDetails();
+  </script>
 
 </body>
 
