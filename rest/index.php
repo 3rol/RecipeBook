@@ -45,7 +45,7 @@ Flight::route('/*', function () {
             return FALSE;
         }
     }
-}});
+});
 
 /* REST API documentation endpoint */
 Flight::route('GET /docs.json', function(){
