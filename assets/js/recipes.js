@@ -11,7 +11,7 @@ var RecipeService = {
         console.log(data);
         var html = '';
         for (let i = 0; i < data.length; i++) {
-          // Fetch user data for the current recipe's user_id
+
           $.ajax({
             url: 'rest/users/' + data[i].user_id,
             type: 'GET',
@@ -20,7 +20,7 @@ var RecipeService = {
               xhr.setRequestHeader('Authorization', localStorage.getItem('user_token'));
             },
             success: function (user) {
-              // Fetch recipe type data for the current recipe's type_id
+              // Fetch recipe type data 
               $.ajax({
                 url: 'rest/recipetype/' + data[i].type_id,
                 type: 'GET',
@@ -52,6 +52,24 @@ var RecipeService = {
             }
           });
         }
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
+  },
+  addRecipe: function (recipeData) {
+    $.ajax({
+      url: 'rest/recipes',
+      type: 'POST',
+      data: JSON.stringify(recipeData),
+      contentType: 'application/json',
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('Authorization', localStorage.getItem('user_token'));
+      },
+      success: function (response) {
+        console.log("Recipe added successfully.");
+
       },
       error: function (xhr, status, error) {
         console.log(error);
