@@ -20,6 +20,7 @@ Flight::register('recipeTypeDao', 'RecipeTypeDao');
 Flight::register('recipeTipsService', 'RecipeTipsService');
 Flight::register('recipeTipsDao', 'RecipeTipsDao');
 Flight::register('userDao', 'UserDao');
+Flight::register('userService', 'UserService');
 
 
 //middleware method for login
